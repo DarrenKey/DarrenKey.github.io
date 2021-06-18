@@ -1,0 +1,31 @@
+body {
+  background-color: #967aa1;
+}
+
+html {
+  background-color: #967aa1;
+}
+
+.customTitle {
+  color: #f5e6e8;
+  font-family: "Playfair Display", serif;
+  font-size: 50px;
+  text-align: center;
+  background-color: #192a51;
+  margin: 50px;
+}
+
+#projectTitle{
+  text-align: center;
+}
+
+.sectionHead{
+    background-color: #192a51;
+    margin-top: 500px;
+}
+
+#titleSectionHead{
+  color: #f5e6e8;
+  font-family: "Playfair Display", serif;
+  padding: 20px
+}

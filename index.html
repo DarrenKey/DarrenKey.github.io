@@ -1,11 +1,113 @@
 <!DOCTYPE html>
 
 <head>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair Display">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <html>
-    <body>
-        <h1>Darren Key's webpage</h1>
-    </body>
+
+<body>
+    <div class="columns">
+        <div class="column is-10 is-offset-1 customTitle">
+            Darren Key
+        </div>
+    </div>
+
+    <div class="columns">
+        <div class="column is-5 is-offset-6 sectionHead" data-aos="fade-up">
+            <p class="title" id="titleSectionHead">
+                Fullstack python programmer and mobile app creator.
+            </p>
+        </div>
+    </div>
+
+    <div class="columns">
+        <div class="column is-10 is-offset-1 sectionHead" id="projectTitle" data-aos="fade-up">
+            <p class="title" id="titleSectionHead">
+                Projects:
+            </p>
+        </div>
+    </div>
+
+    <div class="columns">
+        <div class="column is-5 is-offset-1 sectionHead" data-aos="fade-up">
+            <div class="card">
+                <div class="card-content" id="titleSectionHead">
+                    <p class="title">
+                        TimeKeep - Planner and Tracker
+                    </p>
+
+                    <p class="subtitle">
+                        iOS App to time your day, see what you've spent your time on, and
+                        build
+                        routines and healthy habits. Available on the app store now!
+                    </p>
+                </div>
+
+                <footer class="card-footer">
+                    <p class="card-footer-item">
+                        <span>
+                            Available here: <a
+                                href="https://apps.apple.com/us/app/timekeep-planner-and-tracker/id1499044751">on the
+                                iOS app store</a>
+                        </span>
+                    </p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="columns">
+        <div class="column is-5 is-offset-6 sectionHead" data-aos="fade-up">
+            <div class="card">
+                <div class="card-content" id="titleSectionHead">
+                    <p class="title">
+                        YEP Chat - Better Emotes
+                    </p>
+
+                    <p class="subtitle">
+                        <strong>[Abandoned]</strong> Alternate Twitch-viewing app. View 3rd-party emotes available from
+                        BetterTwitchTV
+                        and FrankerFaceZ on your phone!
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            // Global settings:
+            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+            initClassName: 'aos-init', // class applied after initialization
+            animatedClassName: 'aos-animate', // class applied on animation
+            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+            disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+            throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+
+            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+            offset: 120, // offset (in px) from the original trigger point
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 800, // values from 0 to 3000, with step 50ms
+            easing: 'ease', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+        });
+
+    </script>
+</body>
+
 </html>
