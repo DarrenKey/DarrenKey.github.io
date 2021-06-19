@@ -1,13 +1,13 @@
 body {
-  background-color: #967aa1;
+  background-color: white;
 }
 
 html {
-  background-color: #967aa1;
+  background-color: white;
 }
 
 .customTitle {
-  color: #f5e6e8;
+  color: white;
   font-family: "Playfair Display", serif;
   font-size: 50px;
   text-align: center;
@@ -21,11 +21,34 @@ html {
 
 .sectionHead{
     background-color: #192a51;
-    margin-top: 500px;
+    margin-top: 200px;
 }
 
 #titleSectionHead{
-  color: #f5e6e8;
+  color: white;
   font-family: "Playfair Display", serif;
   padding: 20px
+}
+
+.formsInput{
+  font-family: "Playfair Display", serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+#pythonForm{
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  background-color: #192a51;
+}
+
+#pythonLabel{
+  color: white;
+  font-size: 30px;
+
+}
+
+.submitInfo{
+  margin-bottom: 10px;
 }

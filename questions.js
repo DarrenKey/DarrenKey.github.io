@@ -1,5 +1,6 @@
 const submitButton = document.querySelector("button")
 const moreInfo = document.querySelector(".moreInfo")
+const forms = document.querySelector(".wholeForms")
 
 const content = `
 <div class="columns">
@@ -89,6 +90,8 @@ const content = `
 
 const checkFields = function () {
     const fields = document.querySelectorAll("input")
+
+    forms.style.display = 'none';
 
     if (fields[0].value === "Python" && fields[1].value === "Swift") {
         moreInfo.innerHTML = content;
