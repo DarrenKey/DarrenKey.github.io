@@ -6,90 +6,57 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair Display">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
     <script src="questions.js" defer></script>
 </head>
 
 <html>
 
-<body>
-    <div class="columns">
-        <div class="column is-10 is-offset-1 customTitle">
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <class="navbar-item">
             Darren Key
-        </div>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
     </div>
 
-    <div class="wholeForms">
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item">
+                Home
+            </a>
 
-        <div class="columns">
-            <div class="column is-10 is-offset-1 formsInput" id="pythonForm">
-                <div class="field" data-aos="fade-left">
-                    <label class="label" id="pythonLabel">Q1: What programming language do I have 6+ years of experience
-                        in?</label>
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Python">
-                    </div>
-                </div>
+            <a class="navbar-item">
+                About
+            </a>
 
-            </div>
+            <a class="navbar-item">
+                Resume
+            </a>
+
         </div>
 
-        <div class="columns">
-            <div class="column is-10 is-offset-1 formsInput" id="pythonForm">
-                <div class="field" data-aos="fade-left">
-                    <label class="label" id="pythonLabel">Q2: What programming language do I have 2+ years of experience
-                        in?</label>
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Swift">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="columns is-centered">
-            <div class="column is-1 is-half submitInfo">
-                <div class="field is-grouped" data-aos="fade-up">
-                    <div class="control has-text-centered">
-                        <button class="button is-large has-text-centered">Submit</button>
-                    </div>
-                </div>
-
-            </div>
+        <div class="navbar-end">
+            <a class="navbar-item" href="mailto: darren8key@gmail.com">
+                <i class=" fas fa-envelope-square fa-3x"></i>
+            </a>
+            <a class="navbar-item" href="https://github.com/DarrenKey">
+                <i class="fab fa-github-square fa-3x"></i>
+            </a>
+            <a class="navbar-item" href="https://www.linkedin.com/in/darren-key/">
+                <i class="fab fa-linkedin fa-3x"></i>
+            </a>
         </div>
     </div>
 
 
-    <div class="moreInfo">
-    </div>
 
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            // Global settings:
-            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-            initClassName: 'aos-init', // class applied after initialization
-            animatedClassName: 'aos-animate', // class applied on animation
-            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-            disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-            throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
-
-            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-            offset: 120, // offset (in px) from the original trigger point
-            delay: 0, // values from 0 to 3000, with step 50ms
-            duration: 800, // values from 0 to 3000, with step 50ms
-            easing: 'ease', // default easing for AOS animations
-            once: false, // whether animation should happen only once - while scrolling down
-            mirror: false, // whether elements should animate out while scrolling past them
-            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-
-        });
-
-    </script>
-</body>
+</nav>
 
 </html>
