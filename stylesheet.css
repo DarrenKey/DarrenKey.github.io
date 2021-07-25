@@ -1,0 +1,45 @@
+.heading {
+    text-align: center;
+    color:white;
+    font-size: 50px;
+    font-family: "Playfair Display", serif;
+}
+
+.navbar {
+    border-bottom-color: white;
+    border-bottom-style: solid;
+}
+
+html {
+    background-color: #363636;
+}
+
+#profilepic img{
+    display:block;
+    margin:auto;
+    border: solid;
+}
+
+#logo {
+    border: solid;
+    border-color: white;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#sloganTitle {
+    color: white;
+    font-size: 25px;
+    font-family: "Playfair Display", serif;
+    margin-bottom: 50px;
+}
+
+
+#sloganDescription {
+    color: white;
+    font-size: 15px;
+    font-family: "Playfair Display", serif;
+}
