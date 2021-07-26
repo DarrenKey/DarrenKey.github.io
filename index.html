@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="stylesheet.css">
 
     <script src="questions.js" defer></script>
+    <script src="defaultscript.js" defer></script>
 </head>
 
 <html>
@@ -30,12 +31,12 @@
 
     <div class="navbar-menu">
         <div class="navbar-start">
-            <a class="navbar-item">
+            <a class="navbar-item" href="">
                 Home
             </a>
 
-            <a class="navbar-item">
-                Project
+            <a class="navbar-item" href="#projectTitle" id="projectLink">
+                Projects
             </a>
 
             <a class="navbar-item" href="Resume.docx" download="Resume_DarrenKey">
@@ -84,12 +85,10 @@
         </div>
     </div>
 
-    <!-- 
+
     <div class="columns">
-        <div class="column is-10 is-offset-1 sectionHead" id="projectTitle" data-aos="fade-up">
-            <p class="title" id="titleSectionHead">
-                Projects:
-            </p>
+        <div class="column is-10 is-offset-1" id="projectTitle">
+            Projects
         </div>
     </div>
 
@@ -125,6 +124,7 @@
             </div>
         </div>
     </div>
+
     <div class="columns">
         <div class="column is-5 is-offset-6 sectionHead" data-aos="fade-up">
             <div class="card">
@@ -149,8 +149,86 @@
                 </footer>
             </div>
         </div>
-    </div>`
+    </div>
 
+    <div class="columns">
+        <div class="column is-5 is-offset-1 sectionHead" data-aos="fade-up">
+            <div class="card">
+                <div class="card-content" id="titleSectionHead">
+                    <p class="title">
+                        Recreation of 2048
+                    </p>
+                    <p class="subtitle">
+                        Recreation of 2048, coded in about 4 hours or less.
+                    </p>
+                </div>
+                <footer class="card-footer">
+                    <p class="card-footer-item">
+                        <span>
+                            Source code available <a href="https://github.com/DarrenKey/2048-in-4-hours">here:</a>
+                        </span>
+                    </p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="columns">
+        <div class="column is-5 is-offset-6 sectionHead" data-aos="fade-up">
+            <div class="card">
+                <div class="card-content" id="titleSectionHead">
+                    <p class="title">
+                        Twitch Video Finder
+                    </p>
+                    <p class="subtitle">
+                        Usage of the Twitch API to find a specific video on a channel.
+                    </p>
+                </div>
+                <footer class="card-footer">
+                    <p class="card-footer-item">
+                        <span>
+                            Source code available <a href="https://github.com/DarrenKey/Twitch-Vod-Finder">here:</a>
+                        </span>
+                    </p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="columns">
+        <div class="column is-5 is-offset-1 sectionHead" data-aos="fade-up">
+            <div class="card">
+                <div class="card-content" id="titleSectionHead">
+                    <p class="title">
+                        Chartmetric - Webpage Challenge
+                    </p>
+                    <p class="subtitle">
+                        Challenge for a startup to create either a webpage that processes a database or a webserver that
+                        can
+                        return a database in 24 hours. Chose to do both.
+                    </p>
+                </div>
+                <footer class="card-footer">
+                    <p class="card-footer-item">
+                        <span>
+                            Available <a href="https://protected-ocean-96638.herokuapp.com/">here:
+                            </a>
+                        </span>
+                    </p>
+                </footer>
+                <footer class="card-footer">
+                    <p class="card-footer-item">
+                        <span>
+                            Source code available <a
+                                href="https://github.com/DarrenKey/Chartmetric---Webpage-Challenge---">here:</a>
+                        </span>
+                    </p>
+                </footer>
+            </div>
+        </div>
+    </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -177,7 +255,7 @@
 
         });
 
-    </script> -->
+    </script>
 </body>
 
 </html>

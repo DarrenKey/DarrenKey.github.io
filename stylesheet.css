@@ -12,6 +12,7 @@
 
 html {
     background-color: #363636;
+    scroll-behavior: smooth;
 }
 
 #profilepic img{
@@ -42,4 +43,16 @@ html {
     color: white;
     font-size: 15px;
     font-family: "Playfair Display", serif;
+}
+
+
+#projectTitle{
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-family: "Playfair Display", serif;
+    margin-top: 200px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    border: solid;
 }
