@@ -1,0 +1,115 @@
+@font-face {
+  font-family: Poppins;
+  src: url(fonts/Poppins-Regular.ttf);
+  font-weight: regular;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(fonts/Poppins-SemiBold.ttf);
+  font-weight: semibold;
+}
+
+* {
+  background-color: #191919;
+  color: white;
+  font-family: Poppins;
+  font-weight: semibold;
+  margin-left: 1rem;
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+  margin: 0 0 0 1rem;
+}
+
+h1 {
+  font-size: 6rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.descriptors {
+  list-style-type: none;
+  font-size: 2rem;
+  padding: 0px;
+}
+
+li + li {
+  margin-top: 1rem;
+}
+
+li {
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+.project,
+.education,
+.award {
+  margin-bottom: 1rem;
+}
+
+#projects,
+#education,
+#awards {
+  text-decoration: underline;
+  text-underline-offset: 20px;
+}
+
+#projects {
+  text-decoration-color: #c84b31;
+}
+#education {
+  text-decoration-color: #2d4263;
+}
+
+#awards {
+  text-decoration-color: #f3a712;
+}
+
+#project-title,
+#education-title,
+#award-title {
+  margin: 0%;
+  margin-bottom: 0.5rem;
+  padding: 0%;
+}
+
+.project-body,
+.education-body,
+.award-body {
+  margin: 0%;
+  padding: 0%;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.inline-icons {
+  margin: 0px;
+  display: inline-block;
+  font-size: 4rem;
+}
+
+.icon-links {
+  margin: 0 1rem 0 0;
+  display: inline-block;
+}
+
+.scholarship-links {
+  margin: 0px;
+  display: block;
+  text-decoration: none;
+}
