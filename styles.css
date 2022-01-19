@@ -15,7 +15,7 @@
   font-family: Poppins;
   font-weight: semibold;
   margin-left: 1rem;
-  /* border: 1px solid red; */
+  /* border: 1px solid red;   */
   box-sizing: border-box;
   margin: 0 0 0 1rem;
 }
@@ -110,6 +110,7 @@ p {
 
 .scholarship-links {
   margin: 0px;
-  display: block;
+  display: inline;
   text-decoration: none;
+  color: #f3a712;
 }
