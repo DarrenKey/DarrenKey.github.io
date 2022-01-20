@@ -114,3 +114,40 @@ p {
   text-decoration: none;
   color: #f3a712;
 }
+
+.top-bar{
+  display: grid;
+  grid-column-gap: 1rem;
+  grid-template-columns: auto 1fr repeat(3, auto);
+}
+
+.resume{
+  grid-column: 1;
+  color: #08A4BD;
+}
+
+.github-top-icon, .email-top-icon, .linkedin-top-icon{
+  margin: 0;
+}
+
+.github-top-icon{
+  grid-column: 3;
+}
+
+.email-top-icon{
+  grid-column: 4;
+}
+
+.linkedin-top-icon{
+  grid-column: 5;
+}
+
+.top-icon, .resume{
+  font-size: 3rem;
+  margin: 0;
+}
+
+.top-bar-links{
+  text-decoration: none;
+  margin: 0;
+}
