@@ -55,13 +55,14 @@ li {
 
 .project,
 .education,
-.award {
+.awards{
   margin-bottom: 1rem;
 }
 
 #projects,
-#education,
-#awards {
+#educations,
+#awards,
+#contact-me{
   text-decoration: underline;
   text-underline-offset: 20px;
 }
@@ -69,12 +70,16 @@ li {
 #projects {
   text-decoration-color: #c84b31;
 }
-#education {
+#educations {
   text-decoration-color: #2d4263;
 }
 
 #awards {
   text-decoration-color: #f3a712;
+}
+
+#contact-me{
+  text-decoration-color: #CA61C3;
 }
 
 #project-title,
@@ -148,6 +153,12 @@ p {
 }
 
 .top-bar-links{
+  text-decoration: none;
+  margin: 0;
+}
+
+.contact-me-link{
+  color: #CA61C3;
   text-decoration: none;
   margin: 0;
 }
