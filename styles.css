@@ -79,7 +79,7 @@ li {
 }
 
 #contact-me{
-  text-decoration-color: #CA61C3;
+  text-decoration-color: #BBDBB4;
 }
 
 #project-title,
@@ -128,7 +128,7 @@ p {
 
 .resume{
   grid-column: 1;
-  color: #08A4BD;
+  color: #84BCDA;
 }
 
 .github-top-icon, .email-top-icon, .linkedin-top-icon{
@@ -158,7 +158,12 @@ p {
 }
 
 .contact-me-link{
-  color: #CA61C3;
+  color: #BBDBB4;
   text-decoration: none;
   margin: 0;
+}
+
+.star-icon{
+  margin: 0;
+  color: #c84b31;
 }
