@@ -25,6 +25,10 @@ h1 {
   margin-top: 3rem;
   margin-bottom: 3rem;
   text-align: center;
+  /* -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color:#84BCDA; 
+  
+  this  is for block letters*/
 }
 
 h2 {
