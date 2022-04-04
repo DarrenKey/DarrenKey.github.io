@@ -1,4 +1,4 @@
-
+// Hide all ongoing feature demos to prevent lag
 const hideEveryting = (callback) => {
     $("#timekeep-gif").slideUp(() => {
         $("#timekeep-animation").slideUp("fast", () => {
@@ -18,7 +18,9 @@ const hideEveryting = (callback) => {
 let width = 0
 let height = 0
 
-const setupCanvas = () => {// set up canvas
+// Canvas animation
+const setupCanvas = () => {
+    // set up canvas
 
     const canvas = document.querySelector('canvas');
     const ctx = canvas.getContext('2d');
@@ -29,23 +31,16 @@ const setupCanvas = () => {// set up canvas
     height = canvas.height = document.body.scrollHeight;
 
     // function to generate random number
-
     function random(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-
+    // Gets two speeds and returns either a number between the two speeds or a number between the negative of the two speeds
     function randomSpeed(minSpeed, maxSpeed) {
         const isPositive = Math.random() > 0.5 ? 1 : -1
 
         return isPositive * (Math.floor(Math.random() * (maxSpeed - minSpeed + 1)) + minSpeed);
     }
-
-    // function to generate random RGB color value
-
-    // function randomRGB() {
-    //     return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
-    // }
 
     class Ball {
 
@@ -90,6 +85,7 @@ const setupCanvas = () => {// set up canvas
             return Math.sqrt(x * x + y * y);
         }
 
+        // Sees if balls in range and if so, connects them
         connectBalls() {
             for (const ball of balls) {
                 const dx = this.x - ball.x;
@@ -105,20 +101,6 @@ const setupCanvas = () => {// set up canvas
             }
 
         }
-
-        // collisionDetect() {
-        //     for (const ball of balls) {
-        //         if (!(this === ball)) {
-        //             const dx = this.x - ball.x;
-        //             const dy = this.y - ball.y;
-        //             const distance = Math.sqrt(dx * dx + dy * dy);
-
-        //             if (distance < this.size + ball.size) {
-        //                 ball.color = this.color = randomRGB();
-        //             }
-        //         }
-        //     }
-        // }
 
     }
 
@@ -158,6 +140,9 @@ const setupCanvas = () => {// set up canvas
     return canvas
 }
 
+
+// Updating height and width to support window resizing
+
 const updateHeight = (canvas) => {
     const newHeight = document.body.scrollHeight
 
@@ -176,6 +161,7 @@ const updateWidth = (canvas) => {
 }
 
 
+// Animation displaying each one of the about-me items one at a time
 const descriptionAnimation = (aboutMeArray, currentIndex, speed, canvas) => {
     updateHeight(canvas)
     if (currentIndex < aboutMeArray.length) {
@@ -187,6 +173,7 @@ $(document).ready(() => {
     const canvas = setupCanvas();
     descriptionAnimation($("li.about-me"), 0, 500, canvas);
 
+    // On resize - update width
     $(window).resize(() => { updateWidth(canvas) })
 
     // Timekeep click animation
