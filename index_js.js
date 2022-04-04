@@ -95,7 +95,6 @@ const setupCanvas = () => {// set up canvas
                 const dx = this.x - ball.x;
                 const dy = this.y - ball.y;
                 const distance = this.distance(dx, dy)
-                console.log(distance, distanceNeededToConnect)
                 if (distance <= this.size + ball.size + distanceNeededToConnect) {
                     ctx.beginPath();
                     ctx.strokeStyle = this.color;
@@ -162,16 +161,21 @@ const setupCanvas = () => {// set up canvas
 const updateHeight = (canvas) => {
     const newHeight = document.body.scrollHeight
 
+    console.log(document.body.scrollHeight)
     canvas.height = newHeight
     height = newHeight
 }
 
-$(document).ready(() => {
-    //code here
-    console.log("should work");
-    console.log("update");
+const descriptionAnimation = (aboutMeArray, currentIndex, speed, canvas) => {
+    updateHeight(canvas)
+    if (currentIndex < aboutMeArray.length) {
+        $(aboutMeArray[currentIndex]).slideDown(speed, () => { descriptionAnimation(aboutMeArray, currentIndex + 1, speed, canvas) });
+    }
+}
 
+$(document).ready(() => {
     const canvas = setupCanvas();
+    descriptionAnimation($("li.about-me"), 0, 500, canvas);
 
     // Timekeep click animation
     $("#timekeep").click(() => {

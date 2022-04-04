@@ -164,7 +164,7 @@ color: white;
 }
 
 .animations-gif + .animations-gif{
-  margin-left: 1rem;
+  margin-left: 1.5rem;
 }
 
 .icon-links {
@@ -234,4 +234,8 @@ color: white;
 #star-canvas{
   position: absolute;
   z-index: -1;
+}
+
+.about-me{
+  display: none;
 }
