@@ -10,15 +10,20 @@
 }
 
 .animations-gif{
-  width: 15rem;
   display: inline-block;
 }
+.timekeep-inner-gifs{
+  width: 15rem;
 
-.timekeep-gif{
+}
+.mst-inner-gifs{
+  height: 30rem;
+}
+#timekeep-gif, #mst-gif{
   display: none;
 }
 
-.animations{
+#timekeep-animation, #mst-animation{
   text-align: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
