@@ -166,6 +166,16 @@ const updateHeight = (canvas) => {
     height = newHeight
 }
 
+
+const updateWidth = (canvas) => {
+    const newWidth = window.innerWidth
+    console.log("changed")
+
+    canvas.width = newWidth
+    width = newWidth
+}
+
+
 const descriptionAnimation = (aboutMeArray, currentIndex, speed, canvas) => {
     updateHeight(canvas)
     if (currentIndex < aboutMeArray.length) {
@@ -176,6 +186,8 @@ const descriptionAnimation = (aboutMeArray, currentIndex, speed, canvas) => {
 $(document).ready(() => {
     const canvas = setupCanvas();
     descriptionAnimation($("li.about-me"), 0, 500, canvas);
+
+    $(window).resize(() => { updateWidth(canvas) })
 
     // Timekeep click animation
     $("#timekeep").click(() => {
