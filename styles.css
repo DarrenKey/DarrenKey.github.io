@@ -20,7 +20,7 @@ i{
 
 }
 .mst-inner-gifs{
-  height: 30rem;
+  height: 20rem;
 }
 #timekeep-gif, #mst-gif{
   display: none;
@@ -161,6 +161,10 @@ p {
   height: 4rem;
   display: inline-block;
 color: white;
+}
+
+.animations-gif + .animations-gif{
+  margin-left: 1rem;
 }
 
 .icon-links {

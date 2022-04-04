@@ -29,11 +29,18 @@ const setupCanvas = () => {// set up canvas
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
+
+    function randomSpeed(minSpeed, maxSpeed) {
+        const isPositive = Math.random() > 0.5 ? 1 : -1
+
+        return isPositive * (Math.floor(Math.random() * (maxSpeed - minSpeed + 1)) + minSpeed);
+    }
+
     // function to generate random RGB color value
 
-    function randomRGB() {
-        return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
-    }
+    // function randomRGB() {
+    //     return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
+    // }
 
     class Ball {
 
@@ -74,34 +81,34 @@ const setupCanvas = () => {// set up canvas
             this.y += this.velY;
         }
 
-        collisionDetect() {
-            for (const ball of balls) {
-                if (!(this === ball)) {
-                    const dx = this.x - ball.x;
-                    const dy = this.y - ball.y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
+        // collisionDetect() {
+        //     for (const ball of balls) {
+        //         if (!(this === ball)) {
+        //             const dx = this.x - ball.x;
+        //             const dy = this.y - ball.y;
+        //             const distance = Math.sqrt(dx * dx + dy * dy);
 
-                    if (distance < this.size + ball.size) {
-                        ball.color = this.color = randomRGB();
-                    }
-                }
-            }
-        }
+        //             if (distance < this.size + ball.size) {
+        //                 ball.color = this.color = randomRGB();
+        //             }
+        //         }
+        //     }
+        // }
 
     }
 
     const balls = [];
 
     while (balls.length < 25) {
-        const size = random(10, 20);
+        const size = 3;
         const ball = new Ball(
             // ball position always drawn at least one ball width
             // away from the edge of the canvas, to avoid drawing errors
             random(0 + size, width - size),
             random(0 + size, height - size),
-            random(-7, 7),
-            random(-7, 7),
-            randomRGB(),
+            randomSpeed(3, 7),
+            randomSpeed(3, 7),
+            'rgb(255, 255, 255)',
             size
         );
 
@@ -109,13 +116,13 @@ const setupCanvas = () => {// set up canvas
     }
 
     function loop() {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0)';
+        ctx.fillStyle = '#191919';
         ctx.fillRect(0, 0, width, height);
 
         for (const ball of balls) {
             ball.draw();
             ball.update();
-            ball.collisionDetect();
+            // ball.collisionDetect();
         }
 
         requestAnimationFrame(loop);
@@ -129,7 +136,7 @@ $(document).ready(() => {
     console.log("should work");
     console.log("update");
 
-    setupCanvas();
+    // setupCanvas();
 
     // Timekeep click animation
     $("#timekeep").click(() => {
