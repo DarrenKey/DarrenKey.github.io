@@ -8,6 +8,9 @@
   src: url(fonts/Poppins-SemiBold.ttf);
   font-weight: semibold;
 }
+i{
+  color: white;
+}
 
 .animations-gif{
   display: inline-block;
@@ -40,8 +43,7 @@
 
 }
 
-* {
-  background-color: #191919;
+#rest-body{
   color: white;
   font-family: Poppins;
   font-weight: semibold;
@@ -49,6 +51,12 @@
   /* border: 1px solid red;   */
   box-sizing: border-box;
   margin: 0 1rem 0 1rem;
+}
+
+
+body{
+
+  background-color: #191919;
 }
 
 h1 {
@@ -217,4 +225,11 @@ color: white;
 
 .best-projects{
   color: #c84b31
+}
+
+#star-canvas{
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  z-index: -1;
 }
