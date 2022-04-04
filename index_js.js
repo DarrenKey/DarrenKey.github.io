@@ -15,13 +15,18 @@ const hideEveryting = (callback) => {
 
 }
 
+let width = 0
+let height = 0
+
 const setupCanvas = () => {// set up canvas
 
     const canvas = document.querySelector('canvas');
     const ctx = canvas.getContext('2d');
 
-    const width = canvas.width = window.innerWidth;
-    const height = canvas.height = window.innerHeight;
+    const distanceNeededToConnect = 200;
+
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = document.body.scrollHeight;
 
     // function to generate random number
 
@@ -81,6 +86,27 @@ const setupCanvas = () => {// set up canvas
             this.y += this.velY;
         }
 
+        distance(x, y) {
+            return Math.sqrt(x * x + y * y);
+        }
+
+        connectBalls() {
+            for (const ball of balls) {
+                const dx = this.x - ball.x;
+                const dy = this.y - ball.y;
+                const distance = this.distance(dx, dy)
+                console.log(distance, distanceNeededToConnect)
+                if (distance <= this.size + ball.size + distanceNeededToConnect) {
+                    ctx.beginPath();
+                    ctx.strokeStyle = this.color;
+                    ctx.moveTo(this.x, this.y);
+                    ctx.lineTo(ball.x, ball.y);
+                    ctx.stroke();
+                }
+            }
+
+        }
+
         // collisionDetect() {
         //     for (const ball of balls) {
         //         if (!(this === ball)) {
@@ -100,14 +126,14 @@ const setupCanvas = () => {// set up canvas
     const balls = [];
 
     while (balls.length < 25) {
-        const size = 3;
+        const size = 2;
         const ball = new Ball(
             // ball position always drawn at least one ball width
             // away from the edge of the canvas, to avoid drawing errors
             random(0 + size, width - size),
             random(0 + size, height - size),
-            randomSpeed(3, 7),
-            randomSpeed(3, 7),
+            randomSpeed(2, 4),
+            randomSpeed(2, 4),
             'rgb(255, 255, 255)',
             size
         );
@@ -122,13 +148,22 @@ const setupCanvas = () => {// set up canvas
         for (const ball of balls) {
             ball.draw();
             ball.update();
-            // ball.collisionDetect();
+            ball.connectBalls();
         }
 
         requestAnimationFrame(loop);
     }
 
     loop();
+
+    return canvas
+}
+
+const updateHeight = (canvas) => {
+    const newHeight = document.body.scrollHeight
+
+    canvas.height = newHeight
+    height = newHeight
 }
 
 $(document).ready(() => {
@@ -136,23 +171,28 @@ $(document).ready(() => {
     console.log("should work");
     console.log("update");
 
-    // setupCanvas();
+    const canvas = setupCanvas();
 
     // Timekeep click animation
     $("#timekeep").click(() => {
         if (!$("#timekeep-animation").is(":visible")) {
             hideEveryting(() => {
                 $("#timekeep-animation").slideDown("fast", () => {
-                    $("#timekeep-gif").slideDown()
+                    $("#timekeep-gif").slideDown("fast", () => {
+                        updateHeight(canvas)
+                    })
                 })
             });
         }
         else {
             $("#timekeep-gif").slideUp(() => {
-                $("#timekeep-animation").slideUp("fast")
+                $("#timekeep-animation").slideUp("fast", () => {
+                    updateHeight(canvas)
+                })
             })
 
         }
+
 
     });
 
@@ -161,13 +201,17 @@ $(document).ready(() => {
         if (!$("#mst-animation").is(":visible")) {
             hideEveryting(() => {
                 $("#mst-animation").slideDown("fast", () => {
-                    $("#mst-gif").slideDown("fast")
+                    $("#mst-gif").slideDown("fast", () => {
+                        updateHeight(canvas)
+                    })
                 })
             })
         }
         else {
             $("#mst-gif").slideUp("fast", () => {
-                $("#mst-animation").slideUp("fast")
+                $("#mst-animation").slideUp("fast", () => {
+                    updateHeight(canvas)
+                })
             })
 
         }

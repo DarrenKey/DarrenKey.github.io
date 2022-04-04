@@ -232,8 +232,6 @@ color: white;
 }
 
 #star-canvas{
-  position: fixed;
-  margin: 0;
-  padding: 0;
+  position: absolute;
   z-index: -1;
 }
