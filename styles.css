@@ -9,11 +9,15 @@
   font-weight: semibold;
 }
 
-.timekeep-gif{
+.animations-gif{
   width: 15rem;
   display: inline-block;
+}
+
+.timekeep-gif{
   display: none;
 }
+
 .animations{
   text-align: center;
   padding-top: 2rem;
@@ -114,9 +118,9 @@ li {
   text-decoration-color: #BBDBB4;
 }
 
-#project-title,
-#education-title,
-#award-title {
+.project-title,
+.education-title,
+.award-title {
   margin: 0%;
   margin-bottom: 0.5rem;
   padding: 0%;
