@@ -149,6 +149,12 @@ p {
   font-size: 4rem;
 }
 
+#globe-icon{
+  height: 4rem;
+  display: inline-block;
+color: white;
+}
+
 .icon-links {
   margin: 0 1rem 0 0;
   display: inline-block;
