@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8">
     <script src="https://kit.fontawesome.com/1244d4d258.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index_js.js"></script>
 </head>
 
 <body>
@@ -20,8 +22,6 @@
     </div>
 
     <h1>darren key</h1>
-
-    <h3> i am a:</h3>
     <ul class="descriptors">
         <li class="about-me">python dev of 6 years</li>
         <li class="about-me">iOS dev of 2 years</li>
@@ -34,9 +34,17 @@
     <h2 id="projects">projects</h2>
 
     <div class="project">
-        <h3 id="project-title"><i class="fas star-icon fa-star"></i> timekeep - planner and tracker</h3>
+        <h3 id="project-title" class="timekeep best-projects"><i class="fas star-icon fa-star"></i> timekeep - planner
+            and tracker
+        </h3>
         <p class="project-body">an all-in-one time management app</p>
         <p class="project-body">coded in swift and uses realms</p>
+
+        <div id="timekeep-animation" class="animations">
+            <h4 class="demo-title"> feature demo</h4>
+            <img src="gifs/timekeep.gif" class="timekeep-gif"><img src="gifs/charts.gif" class="timekeep-gif"> <img
+                src="gifs/categories.gif" class="timekeep-gif"><img src="gifs/stopwatch.gif" class="timekeep-gif">
+        </div>
         <a href="https://github.com/DarrenKey/TimeKeep" class="icon-links"><i
                 class="fab fa-github-square inline-icons"></i></a>
         <a href="https://apps.apple.com/us/app/timekeep-planner-and-tracker/id1499044751" class="icon-links"><i
@@ -44,7 +52,7 @@
     </div>
 
     <div class="project">
-        <h3 id="project-title"><i class="fas star-icon fa-star"></i> yep chat - better emotes</h3>
+        <h3 id="project-title" class="best-projects"><i class="fas star-icon fa-star"></i> yep chat - better emotes</h3>
         <p class="project-body">alternative twitch chat viewer with more emotes </p>
         <p class="project-body">coded in swift and uses twitch api</p>
         <a href="https://github.com/DarrenKey/YEP-Chat---BTTV-and-FFZ-Emotes-on-iOS" class="icon-links"><i
@@ -54,13 +62,19 @@
     </div>
 
     <div class="project">
-        <h3 id="project-title"><i class="fas star-icon fa-star"></i> minimum spanning tree visualizer</h3>
+        <h3 id="project-title" class="best-projects"><i class="fas star-icon fa-star"></i> minimum spanning tree
+            visualizer</h3>
         <p class="project-body">GUI visualiser of prim’s and kruskal’s algorithms</p>
         <p class="project-body">coded in python and uses tkinter</p>
         <a href="https://github.com/DarrenKey/GraphsVisualization" class="icon-links"><i
                 class="fab fa-github-square inline-icons "></i></a>
     </div>
 
+    <div class="project">
+        <h3 id="project-title">this website</h3>
+        <p class="project-body">coded from scratch with html and css</p>
+        <p class="project-body">uses jquery</p>
+    </div>
 
     <div class="project">
         <h3 id="project-title">chartmetric webpage</h3>
@@ -70,6 +84,8 @@
         <p class="project-body">coded in python and uses django</p>
         <a href="https://github.com/DarrenKey/Chartmetric---Webpage-Challenge---" class="icon-links"><i
                 class="fab fa-github-square inline-icons "></i></a>
+        <a href="https://protected-ocean-96638.herokuapp.com/" class="icon-links"><i
+                class="fa-solid fa-window-maximize inline-icons"></i></a>
     </div>
 
     <div class="project">
@@ -125,7 +141,8 @@
             </a>
         </h3>
         <p class="award-body">accepted into northwestern university</p>
-        <p class="award-body">5% of northwestern applicants selected for research and entrepreneurship program</p>
+        <p class="award-body">5% of northwestern applicants selected for research and entrepreneurship
+            scholarship/program</p>
     </div>
 
     <div class="awards">
