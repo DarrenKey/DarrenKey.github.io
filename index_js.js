@@ -3,9 +3,16 @@ const hideEveryting = (callback) => {
     $("#timekeep-gif").slideUp(() => {
         $("#timekeep-animation").slideUp("fast", () => {
 
-            $("#mst-gif").slideUp("fast", () => {
-                $("#mst-animation").slideUp("fast",
-                    callback
+            $("#yepchat-gif").slideUp("fast", () => {
+                $("#yepchat-animation").slideUp("fast", () => {
+
+                    $("#mst-gif").slideUp("fast", () => {
+                        $("#mst-animation").slideUp("fast",
+                            callback
+                        )
+                    })
+                }
+
                 )
             })
 
@@ -221,4 +228,25 @@ $(document).ready(() => {
 
     });
 
+    // Yep Chat click animation
+    $("#yep-chat").click(() => {
+        if (!$("#yepchat-animation").is(":visible")) {
+            hideEveryting(() => {
+                $("#yepchat-animation").slideDown("fast", () => {
+                    $("#yepchat-gif").slideDown("fast", () => {
+                        updateHeight(canvas)
+                    })
+                })
+            })
+        }
+        else {
+            $("#yepchat-gif").slideUp("fast", () => {
+                $("#yepchat-animation").slideUp("fast", () => {
+                    updateHeight(canvas)
+                })
+            })
+
+        }
+
+    });
 });

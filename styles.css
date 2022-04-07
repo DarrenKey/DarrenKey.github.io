@@ -15,18 +15,19 @@ i{
 .animations-gif{
   display: inline-block;
 }
-.timekeep-inner-gifs{
+.timekeep-inner-gifs, .yepchat-inner-gifs{
   width: 15rem;
 
 }
+
 .mst-inner-gifs{
   height: 20rem;
 }
-#timekeep-gif, #mst-gif{
+#timekeep-gif, #mst-gif, #yepchat-gif{
   display: none;
 }
 
-#timekeep-animation, #mst-animation{
+#timekeep-animation, #mst-animation, #yepchat-animation{
   text-align: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
