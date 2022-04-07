@@ -14,14 +14,15 @@ i{
 
 .animations-gif{
   display: inline-block;
+  vertical-align: top;
 }
-.timekeep-inner-gifs, .yepchat-inner-gifs{
-  width: 15rem;
+.timekeep-inner-gifs, .yepchat-inner-gifs, .timekeep-demo-text, .yepchat-demo-text{
+  width: 10rem;
 
 }
 
-.mst-inner-gifs{
-  height: 20rem;
+.mst-inner-gifs, .mst-demo-text{
+  width: 60rem;
 }
 #timekeep-gif, #mst-gif, #yepchat-gif{
   display: none;
