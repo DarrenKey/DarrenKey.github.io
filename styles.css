@@ -106,13 +106,15 @@ li {
 
 .project,
 .education,
-.awards{
+.awards,
+.experience{
   margin-bottom: 1rem;
 }
 
 #projects,
 #educations,
 #awards,
+#experiences,
 #contact-me{
   text-decoration: underline;
   text-underline-offset: 20px;
@@ -123,6 +125,9 @@ li {
 }
 #educations {
   text-decoration-color: #2d4263;
+}
+#experiences {
+  text-decoration-color: #BBDBB4;
 }
 
 #awards {
@@ -135,7 +140,8 @@ li {
 
 .project-title,
 .education-title,
-.award-title {
+.award-title,
+.experience-title {
   margin: 0%;
   margin-bottom: 0.5rem;
   padding: 0%;
@@ -143,7 +149,8 @@ li {
 
 .project-body,
 .education-body,
-.award-body {
+.award-body,
+.experience-body{
   margin: 0%;
   padding: 0%;
   margin-bottom: 0.5rem;
